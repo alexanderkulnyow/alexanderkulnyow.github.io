@@ -1,15 +1,20 @@
-# humanstxt.org/
-# The humans responsible & technology colophon
-
 # TEAM
 
-    <name> -- <role> -- <twitter>
+  Front-end: Alexander Kulnyow
+  Twitter: @alexkulnyow
+  Telegram: https://t.me/alexanderkulnyow
+  e-mail: alexanderkulnyow@yahoo.com
+  From: Vitebsk, Belarus.
 
 # THANKS
 
-    <name>
 
-# TECHNOLOGY COLOPHON
+# TECHNOLOGY
 
-    CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
+# SITE
+	Last update:2018/05/15
+	Language: Russian
+	Standards: CSS3, HTML5
+	Components: Apache Server Configs, jQuery, Modernizr, Normalize.css
+	Doctype: HTML5
+	Software: Phpstorm, Adobe XD, Photoshop
