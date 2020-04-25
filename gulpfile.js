@@ -19,8 +19,8 @@ const
 const
   path = {
     project: './',
-    nopug: '!src/pug/**/_*.pug',
-    pug: 'src/pug/**/*.pug',
+    pugs: 'src/pug/**/*.pug',
+    pug: 'src/pug/index.pug',
     css: 'css/',
     sass: 'src/sass/*.*',
     js: 'src/js/**/*.js',
@@ -89,7 +89,7 @@ function buildHTML() {
 }
 
 function scripts() {
-  src(path.js)
+  return src(path.js)
     .pipe(plumber({
       errorHandler: function (err) {
         console.log(err.message);
@@ -102,12 +102,14 @@ function scripts() {
     .on('error', console.log)
     .pipe(rename('index.min.js'))
     .pipe(sourcemaps.write('.'))
-    .pipe(dest(path.bundle)) // Выгружаем в папку app/js
+    .pipe(dest(path.bundle))
+    .pipe(browserReload.reload({stream: true}));
+
 }
 
 function stream() {
   watch(path.sass, parallel(css))
-  watch(path.pug, parallel(buildHTML))
+  watch(path.pugs, parallel(buildHTML))
   watch(path.js, parallel(scripts))
 }
 

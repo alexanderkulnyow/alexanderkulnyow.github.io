@@ -4,3 +4,4 @@
 /src/
 _*.html
 *.conf
+/node_modules/
